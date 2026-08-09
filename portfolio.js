@@ -22,6 +22,7 @@
       var img = document.createElement("img");
       img.src = item.image;
       img.alt = label;
+      img.style.cursor = "zoom-in";
       article.appendChild(img);
 
       var caption = document.createElement("div");
@@ -43,9 +44,50 @@
       }
 
       article.appendChild(caption);
+      article.addEventListener("click", function () {
+        openLightbox(item.image, label, item.description || "");
+      });
       container.appendChild(article);
     });
   }
+
+  var lightboxEl = null;
+
+  function buildLightbox() {
+    var overlay = document.createElement("div");
+    overlay.className = "work-lightbox";
+    overlay.innerHTML =
+      '<button type="button" class="work-lightbox-close" aria-label="Close">&times;</button>' +
+      '<figure><img alt=""><figcaption></figcaption></figure>';
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay || e.target.classList.contains("work-lightbox-close")) {
+        closeLightbox();
+      }
+    });
+    document.body.appendChild(overlay);
+    return overlay;
+  }
+
+  function openLightbox(src, title, description) {
+    if (!lightboxEl) lightboxEl = buildLightbox();
+    var img = lightboxEl.querySelector("img");
+    var caption = lightboxEl.querySelector("figcaption");
+    img.src = src;
+    img.alt = title || "";
+    caption.textContent = description ? title + " — " + description : title || "";
+    lightboxEl.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    if (!lightboxEl) return;
+    lightboxEl.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLightbox();
+  });
 
   function init(items) {
     var containers = document.querySelectorAll(".gallery[data-category], .gallery[data-categories]");
