@@ -1,3 +1,9 @@
 {
-  "items": []
+  "items": [
+    {
+      "category": "digital-art",
+      "image": "/work/uploads/1.jpg",
+      "title": "Digital Art Sample 1"
+    }
+  ]
 }
