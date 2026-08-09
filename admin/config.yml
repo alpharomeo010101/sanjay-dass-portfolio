@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "work/uploads"
+public_folder: "/work/uploads"
+
+collections:
+  - name: "work"
+    label: "Portfolio Work"
+    files:
+      - file: "content/work.json"
+        label: "Work Items"
+        name: "work"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.category}} — {{fields.title}}"
+            fields:
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Digital Art", value: "digital-art" }
+                  - { label: "Handmade Art", value: "handmade-art" }
+                  - { label: "ID Cards", value: "id-cards" }
+                  - { label: "Labels", value: "labels" }
+                  - { label: "Menu Cards", value: "menu-cards" }
+                  - { label: "Posters", value: "posters" }
+                  - { label: "Thumbnails", value: "thumbnails" }
+                  - { label: "Visiting Cards", value: "visiting-cards" }
+                  - { label: "Other Projects", value: "other-projects" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Title (optional)"
+                name: "title"
+                widget: "string"
+                required: false
+              - label: "Description (optional)"
+                name: "description"
+                widget: "text"
+                required: false
