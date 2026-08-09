@@ -54,6 +54,11 @@
       "category": "handmade-art",
       "image": "/work/uploads/hand-1.jpg",
       "title": "hand-1"
+    },
+    {
+      "category": "handmade-art",
+      "image": "/work/uploads/hand-2.jpg",
+      "title": "hand-2"
     }
   ]
 }
