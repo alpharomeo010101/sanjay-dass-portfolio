@@ -39,6 +39,11 @@
       "category": "thumbnails",
       "image": "/work/uploads/thumb-3.jpg",
       "title": "thumb-3"
+    },
+    {
+      "category": "thumbnails",
+      "image": "/work/uploads/thumb-4.jpg",
+      "title": "thumb-4"
     }
   ]
 }
