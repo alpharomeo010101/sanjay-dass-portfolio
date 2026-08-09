@@ -49,6 +49,11 @@
       "category": "thumbnails",
       "image": "/work/uploads/thumb-5.jpg",
       "title": "thumb-5"
+    },
+    {
+      "category": "handmade-art",
+      "image": "/work/uploads/hand-1.jpg",
+      "title": "hand-1"
     }
   ]
 }
