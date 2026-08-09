@@ -44,6 +44,11 @@
       "category": "thumbnails",
       "image": "/work/uploads/thumb-4.jpg",
       "title": "thumb-4"
+    },
+    {
+      "category": "thumbnails",
+      "image": "/work/uploads/thumb-5.jpg",
+      "title": "thumb-5"
     }
   ]
 }
