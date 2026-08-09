@@ -24,6 +24,11 @@
       "category": "digital-art",
       "image": "/work/uploads/5.jpg",
       "title": "Digital Art Sample 5"
+    },
+    {
+      "category": "thumbnails",
+      "image": "/work/uploads/thumb-1.jpg",
+      "title": "thumb-1"
     }
   ]
 }
