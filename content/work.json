@@ -9,6 +9,11 @@
       "category": "digital-art",
       "image": "/work/uploads/2.jpg",
       "title": "Digital Art Sample 2"
+    },
+    {
+      "category": "digital-art",
+      "image": "/work/uploads/3.jpg",
+      "title": "Digital Art Sample 3"
     }
   ]
 }
